@@ -61,13 +61,13 @@ namespace FFmpegSharp.Executor
         {
             Validate();
 
-            FixFilters();
+            //FixFilters();
 
             var @params = BuildParams();
 
             var message = Processor.FFmpeg(@params);
 
-            if(!string.IsNullOrWhiteSpace(message) && -1 == message.IndexOf("kb/s", StringComparison.InvariantCultureIgnoreCase))
+            if(!string.IsNullOrWhiteSpace(message) && -1 == message.IndexOf("kB", StringComparison.InvariantCultureIgnoreCase))
                 throw new ApplicationException(message);
         }
 
