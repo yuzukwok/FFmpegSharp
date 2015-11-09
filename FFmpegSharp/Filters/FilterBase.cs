@@ -30,7 +30,7 @@ namespace FFmpegSharp.Filters
             if (null == Source)
                 throw new ApplicationException("source file is null.");
 
-            if (null == Source.VideoInfo)
+            if (null == Source.AudioInfo)
                 throw new ApplicationException("non audio stream found in source file.");
         }
 
